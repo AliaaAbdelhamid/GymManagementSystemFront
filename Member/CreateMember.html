@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/icon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+    <!-- ^ Bootstrap 5.3.8 css file -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- ^ Our main css file -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>Power fitness | Home</title>
+</head>
+
+<body>
+    <header>
+        <!-- ^ navbar -->
+        <nav class="navbar navbar-expand-lg bg-white my-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="~/images/logo.jpg" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page"
+                                href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Trainers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Sessions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">Plans</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page"
+                                href="#">Memberships</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  px-3 py-2 mx-2 fw-bolder fs-5" aria-current="page" href="#">
+                                Sessions
+                                Schedule
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            <header class="mb-4">
+                <h3 class="text-primary-color">Add Member</h3>
+            </header>
+            <form method="post">
+
+                <!-- Step navigation -->
+                <ul class="nav nav-tabs mb-4" id="addMemberTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="member-tab" data-bs-toggle="tab"
+                            data-bs-target="#member-info" type="button" role="tab">Member Info</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="health-tab" data-bs-toggle="tab" data-bs-target="#health-info"
+                            type="button" role="tab">Health Data</button>
+                    </li>
+                </ul>
+
+                <!-- Tab content -->
+                <div class="tab-content">
+                    <!-- Member Info -->
+                    <div class="tab-pane fade show active" id="member-info" role="tabpanel"
+                        aria-labelledby="member-tab">
+                        <div class="section-header mb-3">
+                            <h5 class="text-primary fw-bold">Personal Information</h5>
+                            <hr class="mt-2">
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Name</label>
+                                <input name="Name" type="text" class="form-control" />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Email</label>
+                                <input name="Email" type="text" class="form-control" />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Phone</label>
+                                <input name="Phone" type="text" class="form-control" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">DateOfBirth</label>
+                                <input name="DateOfBirth" class="form-control" type="date" />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Gender</label>
+                                <select name="Gender" class="form-select">
+                                    <option value="">-- Select Gender --</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="section-header mb-3 mt-4">
+                            <h5 class="text-primary fw-bold">Address Information</h5>
+                            <hr class="mt-2">
+                        </div>
+                        <div class="row g-3">
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">BuildingNumber</label>
+                                <input name="BuildingNumber" class="form-control" />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Street</label>
+                                <input name="Street" class="form-control" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">City</label>
+                                <input name="City" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health Data -->
+                    <div class="tab-pane fade" id="health-info" role="tabpanel" aria-labelledby="health-tab">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Height</label>
+                                <input name="Height" class="form-control" />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Weight</label>
+                                <input name="Weight" class="form-control" />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Blood Type</label>
+                                <select name="BloodType" class="form-select">
+                                    <option value="">Select</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Note</label>
+                                <input name="Note" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="d-flex justify-content-end gap-3 mt-4">
+                    <a asp-controller="Member" asp-action="Index" class="btn btn-outline-secondary px-4">
+                        <i class="bi bi-arrow-left me-2"></i> Back to List
+                    </a>
+
+                    <button type="submit" class="btn btn-primary px-4">
+                        <i class="bi bi-plus-circle me-2"></i> Add
+                    </button>
+                </footer>
+
+            </form>
+
+        </main>
+    </div>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/jquery.validate.unobtrusive.min.js"></script>
+</body>
+
+</html>
