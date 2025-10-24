@@ -1,0 +1,63 @@
+﻿<div id="Alert" class="alert alert-danger alert-dismissible fade show">
+    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+    Error Message
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>@ViewData["Title"]</h4>
+                </div>
+                <div class="card-body">
+                    <form>
+
+                        <div class="mb-3">
+                            <label  class="form-label">Member</label>
+                            <select  class="form-select">
+                                <option value="">-- Select Member --</option>
+                                <option value="2">Omar Mohamed</option>
+                                <option value="3">Ahmed Adel</option>
+                                <option value="2">Salma Osama</option>
+                                <option value="2">Maha Ahmed</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label  class="form-label">Plan</label>
+                            <select  class="form-select">
+                                <option value="">-- Select Plan --</option>
+                                <option value="1">Basic Plan</option>
+                                <option value="2">Standard Plan</option>
+                                <option value="3">Premium Plan</option>
+                                <option value="4">Annual Plan</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Create Membership</button>
+                            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const alertBox = document.getElementById("Alert");
+        if (alertBox) {
+            setTimeout(() => {
+                alertBox.style.transition = "opacity 0.5s ease";
+                alertBox.style.opacity = "0";
+                setTimeout(() => alertBox.remove(), 500);
+            }, 1500);
+        }
+    });
+</script>

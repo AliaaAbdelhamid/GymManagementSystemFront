@@ -95,10 +95,22 @@
                         <div class="section-header mb-3">
                             <h5 class="text-primary fw-bold">Personal Information</h5>
                             <hr class="mt-2">
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-12 col-md-6">
-                                <label class="form-label">Name</label>
+                            </div>
+                            <div class="row g-3">
+                                <div class="form-group">
+                                    <!-- Photo Preview -->
+                                    <div class="mt-2">
+                                        <img id="photoPreview" src="#" alt="Photo Preview" style="max-width: 200px; display: none;"
+                                            class="img-thumbnail" />
+                                    </div>
+                                    <label asp-for="PhotoFile" class="control-label">Profile Photo <span class="text-danger">*</span></label>
+                                    <input asp-for="PhotoFile" type="file" class="form-control" accept="image/*" id="photoInput" required />
+                                    <span asp-validation-for="PhotoFile" class="text-danger"></span>
+                                    <small class="form-text text-muted">Max size: 5 MB. Allowed types: JPG, PNG, GIF (Required)</small>
+                                </div>
+                            
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Name</label>
                                 <input name="Name" type="text" class="form-control" />
                             </div>
 
@@ -199,6 +211,21 @@
     </div>
 <script src="../js/jquery.validate.min.js"></script>
 <script src="../js/jquery.validate.unobtrusive.min.js"></script>
+  <script>
+      // Preview photo before upload
+      document.getElementById('photoInput').addEventListener('change', function(e) {
+          var file = e.target.files[0];
+          if (file) {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  var preview = document.getElementById('photoPreview');
+                  preview.src = e.target.result;
+                  preview.style.display = 'block';
+              }
+              reader.readAsDataURL(file);
+          }
+      });
+  </script>
 </body>
 
 </html>
